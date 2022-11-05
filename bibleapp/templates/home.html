@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row row-sm">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">All Subcategories</h3>
+            </div>
+            
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table id="example2" class="table text-nowrap key-buttons border-bottom">
+                        <thead>
+                            <tr>
+                                <th class="border-bottom-0">S/n</th>
+                                <th class="border-bottom-0">Name</th>
+                                <th class="border-bottom-0">Number of books</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in subcategories %}
+                                <tr>
+                                      
+                                    <td><a href="/books/{{i.id}}">{{ forloop.counter }}</a></td>
+                                    <td><a href="/books/{{i.id}}">{{ i.Category }}</a></td>
+                                    <td><a href="/books/{{i.id}}">{{ i.Count }}</a></td>
+                                    
+                                </tr>
+                            {% endfor %}
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+    
+    
