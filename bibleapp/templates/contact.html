@@ -1,0 +1,79 @@
+{% extends 'basehome.html' %}   
+  {% load static %}
+{% block content %}
+     
+        <!-- ***** Breadcrumb Area Start ***** -->
+        <section class="section breadcrumb-area d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Breamcrumb Content -->
+                        <div class="breadcrumb-content d-flex flex-column align-items-center text-center">
+                            <h3>Contact Us</h3>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a class="text-uppercase" href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active">Contact</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** Breadcrumb Area End ***** -->
+
+        <!--====== Contact Area Start ======-->
+        <section id="contact" class="contact-area bg-gray ptb_100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-6">
+                        <!-- Section Heading -->
+                        <div class="section-heading text-center">
+                            <h2 class="text-capitalize">Stay Tuned</h2>
+                            <p class="d-none d-sm-block mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.</p>
+                            <p class="d-block d-sm-none mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Contact Box -->
+                        <div class="contact-box text-center">
+                            <!-- Contact Form -->
+                            <form id="contact-form" method="POST" action="https://theme-land.com/appo/demo/assets/php/mail.php">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="name" placeholder="Name" required="required">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="subject" placeholder="Subject" required="required">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <textarea class="form-control" name="message" placeholder="Message" required="required"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-bordered mt-3 mt-sm-4" type="submit">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <p class="form-message"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--====== Contact Area End ======-->
+
+        <!--====== Map Area Start ======-->
+        <section class="section map-area">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2485.596666220624!2d-0.16124461362595294!3d51.46556134684942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487605a25375dfb7%3A0xe0d9fa09dcf932a8!2s15%20Theatre%20St%2C%20Battersea%2C%20London%20SW11%205ND%2C%20UK!5e0!3m2!1sen!2sbd!4v1567427969685!5m2!1sen!2sbd" width="100" height="100" style="border:0;" allowfullscreen=""></iframe>
+        </section>
+        <!--====== Map Area End ======-->
+
+ {% endblock content %}

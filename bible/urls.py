@@ -17,10 +17,15 @@ from bibleapp import views
 from django.contrib import admin
 from django.urls import path
 from bibleapp.views import *
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('home/', views.home),
+    path('', views.index,name='index'),
+    path('video/', views.video,name='video'),
+    path('audio/', views.audio,name='audio'),
+    path('contact/', views.contact,name='contact'),
     path('all/<str:pk>', views.view_data),
     path('category/<str:pk>', views.subcategories,name='category'),
     path('books/<str:pk>', views.headers,name='list'),
@@ -28,3 +33,7 @@ urlpatterns = [
     path('login/', views.login_view,name='login'),
     path('logout/', views.logout_view,name='logout'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings. STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,0 +1,225 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>Appo - App Landing Page | Default</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="{% static 'assetsp/img/favicon.png' %}">
+
+    <!-- ***** All CSS Files ***** -->
+
+    <!-- Style css -->
+    <link rel="stylesheet" href="{% static 'assetsp/css/style.css' %}">
+
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="{% static 'assetsp/css/responsive.css' %}">
+
+</head>
+
+<body class="miami">
+    <!--====== Preloader Area Start ======-->
+    <div id="loader">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </div>
+    <!--====== Preloader Area End ======-->
+
+    <!--====== Scroll To Top Area Start ======-->
+    <div id="scrollUp" title="Scroll To Top">
+        <i class="icofont-bubble-up"></i>
+    </div>
+    <!--====== Scroll To Top Area End ======-->
+
+    <div class="all-area">
+        <!-- ***** Header Start ***** -->
+        <header class="section header-area">
+            <div id="appo-header" class="main-header-area">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="#">
+                            <img class="logo" src="{% static 'assetsp/img/logo/logo.png' %}" alt="">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#appo-menu">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!-- Appo Menu -->
+                        <div class="collapse navbar-collapse" id="appo-menu">
+                            <!-- Header Items -->
+                            <ul class="navbar-nav header-items ml-auto">
+                                <li class="nav-item active dropdown">
+                                    <a class="nav-link" href="/" id="navbarDropdown" role="button">
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link scroll" href="#features">Features</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/video/">Videos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/audio/">Audios</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-2" role="button" data-toggle="dropdown">
+                                        More
+                                    </a>
+                                    <!-- Blog Menu -->
+                                    <div class="dropdown-menu mega-menu blog-menu px-3 py-md-3">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <ul class="single-menu">
+                                                    <li><a class="dropdown-item" href="blog-two-column.html">Blog - 2 Column</a></li>
+                                                    <li><a class="dropdown-item" href="blog-three-column.html">Blog - 3 Column</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/contact/">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- ***** Header End ***** -->
+
+
+         {% block content %}
+         {% endblock %}
+
+
+
+        <!--====== Footer Area Start ======-->
+        <footer class="section footer-area footer-bg">
+            <!-- Footer Top -->
+            <div class="footer-top ptb_100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <!-- Footer Items -->
+                            <div class="footer-items">
+                                <!-- Logo -->
+                                <a class="navbar-brand" href="#">
+                                    <img class="logo" src="{% static 'assetsp/img/logo/logo-white.png' %}" alt="">
+                                </a>
+                                <p class="text-white-50 mt-2 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis non, fugit totam vel laboriosam vitae.</p>
+                                <!-- Social Icons -->
+                                <div class="social-icons d-flex">
+                                    <a class="facebook" href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a class="twitter" href="#">
+                                        <i class="fab fa-twitter"></i>
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a class="google-plus" href="#">
+                                        <i class="fab fa-google-plus-g"></i>
+                                        <i class="fab fa-google-plus-g"></i>
+                                    </a>
+                                    <a class="vine" href="#">
+                                        <i class="fab fa-vine"></i>
+                                        <i class="fab fa-vine"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <!-- Footer Items -->
+                            <div class="footer-items">
+                                <!-- Footer Title -->
+                                <h3 class="footer-title text-white mb-2">Useful Links</h3>
+                                <ul>
+                                    <li class="py-2"><a class="text-white-50" href="#">Home</a></li>
+                                    <li class="py-2"><a class="text-white-50" href="#">About Us</a></li>
+                                    <li class="py-2"><a class="text-white-50" href="#">Services</a></li>
+                                    <li class="py-2"><a class="text-white-50" href="#">Blog</a></li>
+                                    <li class="py-2"><a class="text-white-50" href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <!-- Footer Items -->
+                            <div class="footer-items">
+                                <!-- Footer Title -->
+                                <h3 class="footer-title text-white mb-2">Product Help</h3>
+                                <ul>
+                                    <li class="py-2"><a class="text-white-50" href="#">FAQ</a></li>
+                                    <li class="py-2"><a class="text-white-50" href="#">Privacy Policy</a></li>
+                                    <li class="py-2"><a class="text-white-50" href="#">Support</a></li>
+                                    <li class="py-2"><a class="text-white-50" href="#">Terms &amp; Conditions</a></li>
+                                    <li class="py-2"><a class="text-white-50" href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <!-- Footer Items -->
+                            <div class="footer-items">
+                                <!-- Footer Title -->
+                                <h3 class="footer-title text-white mb-2">Download</h3>
+                                <ul>
+                                    <li class="py-2"><a class="text-white-50" href="#">For Windows</a></li>
+                                    <li class="py-2"><a class="text-white-50" href="#">For Linux</a></li>
+                                    <li class="py-2"><a class="text-white-50" href="#">For IOS</a></li>
+                                    <li class="py-2"><a class="text-white-50" href="#">For Android</a></li>
+                                    <li class="py-2"><a class="text-white-50" href="#">For Mac</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Copyright Area -->
+                            <div class="copyright-area d-flex flex-wrap justify-content-center justify-content-sm-between text-center py-4">
+                                <!-- Copyright Left -->
+                                <div class="copyright-left text-white-50">&copy; Copyrights 2019 Appo All rights reserved.</div>
+                                <!-- Copyright Right -->
+                                <div class="copyright-right text-white-50">Made with <i class="icofont-heart-alt"></i> By <a class="text-white-50" href="#">Theme Land</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--====== Footer Area End ======-->
+    </div>
+
+
+    <!-- ***** All jQuery Plugins ***** -->
+
+    <!-- jQuery(necessary for all JavaScript plugins) -->
+    <script src="{% static 'assetsp/js/jquery/jquery-3.3.1.min.js' %}"></script>
+
+    <!-- Bootstrap js -->
+    <script src="{% static 'assetsp/js/bootstrap/popper.min.js' %}"></script>
+    <script src="{% static 'assetsp/js/bootstrap/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins js -->
+    <script src="{% static 'assetsp/js/plugins/plugins.min.js' %}"></script>
+
+    <!-- Active js -->
+    <script src="{% static 'assetsp/js/active.js' %}"></script>
+</body>
+</html>

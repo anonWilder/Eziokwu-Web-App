@@ -1,0 +1,76 @@
+{% extends 'basehome.html' %}   
+  {% load static %}
+{% block content %}
+     
+     <!-- ***** Breadcrumb Area Start ***** -->
+        <section class="section breadcrumb-area overlay-dark d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Breamcrumb Content -->
+                        <div class="breadcrumb-content d-flex flex-column align-items-center text-center">
+                            <h3 class="text-white">Blog - 2 Column</h3>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active">Blog</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** Breadcrumb Area End ***** -->
+
+        <!-- ***** Blog Area Start ***** -->
+        <section id="blog" class="section blog-area ptb_100">
+            <div class="container">
+                <div class="row">
+                {% for a in audio %}
+                    <div class="col-12 col-md-6">
+                        <!-- Single Blog -->
+                        <div class="single-blog res-margin">
+                            <!-- Blog Thumb -->
+                            <div class="blog-thumb">
+                                <a href="#"><img src="assets/img/blog/blog-1.jpg" alt=""></a>
+                            </div>
+                            <!-- Blog Content -->
+                            <div class="blog-content p-4">
+                                <!-- Meta Info -->
+                                <ul class="meta-info d-flex justify-content-between">
+                                    <li>By <a href="#">{{a.author}}</a></li>
+                                    <li><a href="#">{{a.date}}</a></li>
+                                </ul>
+                                <!-- Blog Title -->
+                                <h3 class="blog-title my-3"><a href="#">{{a.title}}</a></h3>
+                                <p>{{a.discription}}</p>
+                                <a href="#" class="blog-btn mt-3">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Pagination -->
+                        <ul class="pagination justify-content-center">
+                            <li class="disabled px-1">
+                                <a href="#" aria-label="Previous">
+                                    <i class="fas fa-arrow-left"></i>
+                                </a>
+                            </li>
+                            <li class="px-1"><a href="#">1</a></li>
+                            <li class="active px-1"><a href="#">2</a></li>
+                            <li class="px-1"><a href="#">3</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** Blog Area End ***** -->
+
+          {% endblock content %}

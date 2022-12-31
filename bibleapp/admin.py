@@ -4,3 +4,5 @@ from .models import *
 admin.site.register(category)
 admin.site.register(subcategory)
 admin.site.register(header)
+admin.site.register(Video)
+admin.site.register(Audio)

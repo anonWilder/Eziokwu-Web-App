@@ -12,6 +12,19 @@ from django.contrib import messages
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 # Create your views here.
+def index(request):
+    return render(request,"index.html")
+
+def video(request):
+    video = Video.objects.all().order_by('-date')
+    return render(request,"video.html",{"video":video})
+
+def audio(request):
+    audio = Audio.objects.all().order_by('-date')
+    return render(request,"audio.html",{"audio":audio})
+
+def contact(request):
+    return render(request,"contact.html")
 
 def home(request):
     # cat = category.objects.get(pk=1)
